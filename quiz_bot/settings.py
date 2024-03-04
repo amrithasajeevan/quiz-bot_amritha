@@ -40,9 +40,8 @@ SECRET_KEY = 'django-insecure-td(*4#)n^+hy_z=kn+(&7g=aj)a7)!)cqoh28p2sxdozd_0-d7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool_value('DEBUG', True)
 
-ALLOWED_HOSTS = [
-    "localhost",
-]
+ALLOWED_HOSTS = []
+
 
 if DEBUG:
     ALLOWED_HOSTS.append("*")
@@ -104,17 +103,17 @@ CHANNEL_LAYERS = {
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
 DATABASES = {
-    'default': {
-        'ENGINE': env('DB_ENGINE', 'django.db.backends.postgresql'),
-        'NAME': env('DB_NAME', 'postgres'),
-        'USER': env('DB_USER', 'postgres'),
-        'PASSWORD': env('DB_PASSWORD', 'password'),
-        'HOST': env('DB_HOST', 'db'),
-        'PORT': env('DB_PORT', '5432'),
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "crmdb",
+        "USER": "crm",
+        "PASSWORD": "crmadmin@123",
+        "HOST": "127.0.0.1",
+        "PORT": "5432",
     }
 }
+
 
 
 # Password validation
